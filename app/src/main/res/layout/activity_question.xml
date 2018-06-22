@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionActivity">
+    <ImageView
+        android:tint="#6F000000"
+        android:src="@drawable/salahcartoon"
+        android:id="@+id/player_image"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:paddingBottom="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="#6F000000"
+
+            android:paddingTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/lives2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x "
+                    android:textColor="@color/allTextColor"
+                    android:textSize="19.67dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/lives_count_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="@color/allTextColor"
+                    android:textSize="19.67dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding = "10dp"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/clickimage"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp" />
+                <TextView
+                    android:id="@+id/timer_text_view"
+                    android:textColor="@color/allTextColor"
+                    android:textStyle="bold"
+                    android:textSize="19.67dp"
+                    android:text="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:textStyle="bold"
+                    android:textSize="19.67dp"
+                    android:text="Score:"
+                    android:textColor="@color/allTextColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/score_text_view"
+                    android:paddingRight="10dp"
+                    android:textStyle="bold"
+                    android:textSize="19.67dp"
+                    android:text="0"
+                    android:textColor="@color/allTextColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:background="#6F000000"
+            android:scrollbars="vertical"
+            android:padding="10dp"
+            android:textColor="@color/allTextColor"
+            android:textStyle="bold"
+            android:id="@+id/question_text"
+            android:text="question 1 "
+            android:textSize="22.75dp"
+            android:layout_width="match_parent"
+            android:layout_height="230dp" />
+
+
+    <Button
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/allTextColor"
+        android:background="#6F000000"
+        android:layout_below="@+id/question_text"
+        android:id="@+id/choice1"
+        android:text="choice1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/allTextColor"
+        android:background="#6F000000"
+        android:layout_below="@+id/choice1"
+        android:id="@+id/choice2"
+        android:layout_marginTop="10dp"
+        android:text="choice2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAllCaps="false"
+        android:background="#6F000000"
+        android:textColor="@color/allTextColor"
+        android:layout_below="@+id/choice2"
+        android:id="@+id/choice3"
+        android:layout_marginTop="10dp"
+        android:text="choice3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/allTextColor"
+        android:background="#6F000000"
+        android:layout_below="@+id/choice3"
+        android:id="@+id/choice4"
+        android:layout_marginTop="10dp"
+        android:text="choice4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>
