@@ -17,21 +17,16 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.shybal.liverpoolquiz.musicService.BackgroundMusic;
+import com.jaeger.library.StatusBarUtil;
 
 public class HomeActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Spinner playerNamesSpinner;
     String playerName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window w = getWindow();
-            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
         super.onCreate(savedInstanceState);
+        StatusBarUtil.setTransparent(HomeActivity.this);
         setContentView(R.layout.activity_home);
-        getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
        //set up the spinners
         playerNamesSpinner = (Spinner) findViewById(R.id.select_player_spinner);
         playerNamesSpinner.setOnItemSelectedListener(this);
@@ -73,7 +68,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+/*        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Are you sure you want to exit?")
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -87,6 +82,6 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
                     }
                 });
         AlertDialog alert = builder.create();
-        alert.show();
+        alert.show();*/
     }
 }

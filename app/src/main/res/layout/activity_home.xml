@@ -19,8 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <TextView
-        android:textColor="#e10b0b"
-        android:background="#6F000000"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#fff"
         android:layout_marginTop="30dp"
         android:id="@+id/choose_player_text"
         android:textSize="30.87dp"

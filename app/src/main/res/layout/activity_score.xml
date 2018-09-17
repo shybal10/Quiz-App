@@ -7,7 +7,6 @@
     tools:context=".ScoreActivity">
 
     <ImageView
-        android:tint="#6F000000"
         android:src="@drawable/bg2"
         android:id="@+id/player_image"
         android:scaleType="fitXY"

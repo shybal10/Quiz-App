@@ -11,45 +11,45 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Questions {
-
-    public Questions() {
+public class QuestionsList {
+    public int getQuestionCount() {
+        return questionCount;
     }
 
-    public ArrayList<String> getChoice1() {
-        return choice1;
+    public void setQuestionCount(int questionCount) {
+        this.questionCount = questionCount;
     }
 
-    public ArrayList<String> getChoice2() {
-        return choice2;
+    private int questionCount;
+    private ArrayList<Question> questionArrayList = new ArrayList<>();
+
+    public QuestionsList() {
     }
 
-    public ArrayList<String> getChoice3() {
-        return choice3;
+
+    public void addQuestion(Question question) {
+        questionArrayList.add(question);
     }
 
-    public ArrayList<String> getChoice4() {
-        return choice4;
+
+    public Question getQuestion(int key) {
+        return questionArrayList.get(key);
     }
 
-    public ArrayList<String> getAnswers() {
-        return answers;
+    public ArrayList<Question> getQuestions() {
+
+        return questionArrayList;
     }
 
-    public ArrayList<String> getQuestions() {
-
-        return questions;
+    public void setQuestionArrayList(ArrayList<Question> questionArrayList) {
+        this.questionArrayList = questionArrayList;
     }
 
-    private Cursor c = null;
-    private ArrayList<String> choice1 = null;
-    private ArrayList<String> choice2 = null;
-    private ArrayList<String> choice3 = null;
-    private ArrayList<String> choice4 = null;
-    private ArrayList<String> questions = null;
-    private ArrayList<String> answers = null;
 
 
+
+
+/*
     public void setDataToQuestions(Context context, String player) {
         questions = new ArrayList<>();
         answers = new ArrayList<>();
@@ -91,6 +91,7 @@ public class Questions {
 
 
     }
+*/
 
 
 }

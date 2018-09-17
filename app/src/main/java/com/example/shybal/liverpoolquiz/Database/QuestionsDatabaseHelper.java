@@ -28,7 +28,6 @@ public class QuestionsDatabaseHelper extends SQLiteOpenHelper {
         Log.e("Path 1", DB_PATH);
     }
 
-
     public void createDataBase() throws IOException {
         boolean dbExist = checkDataBase();
         if (dbExist) {
